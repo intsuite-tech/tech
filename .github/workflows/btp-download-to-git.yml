@@ -43,7 +43,7 @@ jobs:
     environment: ${{ inputs.source-env }}
     steps:     
       - name: Check team authorization
-        uses: Sztomi8/cicd-actions-for-sap-integration-suite/.github/actions/check-team-authorization@v1
+        uses: Sztomi8/cicd-actions-for-sap-integration-suite/.github/actions/check-team-authorizatio@v1
         with:
           team-slug: ${{ vars.BTP_ADMIN_TEAM_SLUG }}
           github-token: ${{ secrets.GIT_ORG_TOKEN }}
