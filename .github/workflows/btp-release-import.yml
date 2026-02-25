@@ -45,7 +45,7 @@ jobs:
     environment: ${{ inputs.target-env }}
     steps:     
       - name: Check team authorization
-        uses: SAP/cicd-actions-for-sap-integration-suite/.github/actions/check-team-authorization@v1
+        uses: Sztomi8/cicd-actions-for-sap-integration-suite/.github/actions/check-team-authorization@v1
         with:
           team-slug: ${{ vars.BTP_ADMIN_TEAM_SLUG }}
           github-token: ${{ secrets.GIT_ORG_TOKEN }}
@@ -79,7 +79,7 @@ jobs:
   analyze-changes:
     needs: [read-env-vars]
     name: Analyze Changes
-    uses: SAP/cicd-actions-for-sap-integration-suite/.github/workflows/analyze-changes.yml@v1
+    uses: Sztomi8/cicd-actions-for-sap-integration-suite/.github/workflows/analyze-changes.yml@v1
     with:
       workflow-ref: v1		
       target-env: ${{ github.event.inputs.target-env }}
@@ -100,7 +100,7 @@ jobs:
     needs: [read-env-vars, analyze-changes]
     name: Execute Deployment
     if: ${{ github.event.inputs.perform-deploy == 'true' }}
-    uses: SAP/cicd-actions-for-sap-integration-suite/.github/workflows/delete-upload.yml@v1
+    uses: Sztomi8/cicd-actions-for-sap-integration-suite/.github/workflows/delete-upload.yml@v1
     with:
       workflow-ref: v1
       target-env: ${{ github.event.inputs.target-env }}

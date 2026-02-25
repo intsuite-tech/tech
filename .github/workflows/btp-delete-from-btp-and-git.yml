@@ -42,7 +42,7 @@ jobs:
     environment: ${{ inputs.target-env }}
     steps:     
       - name: Check team authorization
-        uses: SAP/cicd-actions-for-sap-integration-suite/.github/actions/check-team-authorization@v1
+        uses: Sztomi8/cicd-actions-for-sap-integration-suite/.github/actions/check-team-authorization@v1
         with:
           team-slug: ${{ vars.BTP_DEV_TEAM_SLUG }}
           github-token: ${{ secrets.GIT_ORG_TOKEN }}
@@ -73,7 +73,7 @@ jobs:
   delete-on-dev:
     needs: read-env-vars-dev
     name: Delete from DEV
-    uses: SAP/cicd-actions-for-sap-integration-suite/.github/workflows/delete-upload.yml@v1
+    uses: Sztomi8/cicd-actions-for-sap-integration-suite/.github/workflows/delete-upload.yml@v1
     with:
       workflow-ref: v1		
       target-env: DEV
@@ -116,7 +116,7 @@ jobs:
   delete-on-tst:
     needs: read-env-vars-tst
     name: Delete from TST
-    uses: SAP/cicd-actions-for-sap-integration-suite/.github/workflows/delete-upload.yml@v1
+    uses: Sztomi8/cicd-actions-for-sap-integration-suite/.github/workflows/delete-upload.yml@v1
     with:
       workflow-ref: v1		
       target-env: TST
@@ -136,7 +136,7 @@ jobs:
   delete-from-git:
       needs: delete-on-tst
       name: Delete from GIT
-      uses: SAP/cicd-actions-for-sap-integration-suite/.github/workflows/delete-dir-from-git.yml@v1
+      uses: Sztomi8/cicd-actions-for-sap-integration-suite/.github/workflows/delete-dir-from-git.yml@v1
       with:
         workflow-ref: v1
         id: ${{ inputs.id }}
