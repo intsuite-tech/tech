@@ -43,7 +43,7 @@ jobs:
     environment: ${{ inputs.source-env }}
     steps:     
       - name: Check team authorization
-        uses: Sztomi8/cicd-actions-for-sap-integration-suite/.github/actions/check-team-authorization@v1
+        uses: Sztomi8/cicd-actions-for-sap-integration-suite/.github/actions/check-team-authorization@main
         with:
           team-slug: ${{ vars.BTP_ADMIN_TEAM_SLUG }}
           github-token: ${{ secrets.GIT_ORG_TOKEN }}
@@ -74,7 +74,7 @@ jobs:
   btp-download-package:
     needs: [authorize, read-env-vars]
     name: Download from BTP to GIT
-    uses: Sztomi8/cicd-actions-for-sap-integration-suite/.github/workflows/download-btp-to-git.yml@v1
+    uses: Sztomi8/cicd-actions-for-sap-integration-suite/.github/workflows/download-btp-to-git.yml@main
     with:
        workflow-ref: v1
        source-env: ${{ inputs.source-env }}
