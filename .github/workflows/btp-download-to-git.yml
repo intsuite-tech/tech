@@ -74,7 +74,7 @@ jobs:
   btp-download-package:
     needs: [authorize, read-env-vars]
     name: Download from BTP to GIT
-    uses: Sztomi8/cicd-actions-for-sap-integration-suite/.github/workflows/download-btp-to-git.yml
+    uses: Sztomi8/cicd-actions-for-sap-integration-suite/.github/workflows/download-btp-to-git.yml@v1
     with:
        workflow-ref: v1
        source-env: ${{ inputs.source-env }}
