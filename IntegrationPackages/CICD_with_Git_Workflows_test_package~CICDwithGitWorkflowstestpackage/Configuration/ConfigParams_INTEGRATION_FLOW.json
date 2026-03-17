@@ -4,6 +4,21 @@
     "PackageID": "CICDwithGitWorkflowstestpackage",
     "Artifacts": [
       {
+        "ArtifactID": "test_iflow_2",
+        "ArtifactName": "test_iflow_2",
+        "ArtifactType": "INTEGRATION_FLOW",
+        "Parameters": [
+          {
+            "DataType": "xsd:string",
+            "Description": null,
+            "ParameterKey": "SAP_ProfileId",
+            "ParameterValues": {
+              "Default": "iflmap"
+            }
+          }
+        ]
+      },
+      {
         "ArtifactID": "test_iflow",
         "ArtifactName": "test_iflow",
         "ArtifactType": "INTEGRATION_FLOW",

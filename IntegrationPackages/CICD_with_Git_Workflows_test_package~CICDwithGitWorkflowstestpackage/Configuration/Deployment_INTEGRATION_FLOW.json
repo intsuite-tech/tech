@@ -4,6 +4,11 @@
     "PackageID": "CICDwithGitWorkflowstestpackage",
     "IntegrationFlows": [
       {
+        "ArtifactID": "test_iflow_2",
+        "ArtifactName": "test_iflow_2",
+        "Deploy": "false"
+      },
+      {
         "ArtifactID": "test_iflow",
         "ArtifactName": "test_iflow",
         "Deploy": "false"
