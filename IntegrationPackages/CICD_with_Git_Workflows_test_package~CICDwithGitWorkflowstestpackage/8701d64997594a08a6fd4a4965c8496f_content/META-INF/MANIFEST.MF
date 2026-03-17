@@ -7,4 +7,8 @@ SAP-BundleType: ValueMapping
 SAP-NodeType: IFLMAP
 Import-Package: com.sap.xi.mapping.camel.valmap
 Bundle-Activator: com.sap.xi.mapping.camel.valmap.ValueMappingActivator
+Origin-Bundle-Name: test_vm
+Origin-Bundle-Version: 1.0.0
+Origin-Bundle-SymbolicName: test_vm
+Origin-ModifiedDate: 1772011318482
 

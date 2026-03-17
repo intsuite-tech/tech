@@ -17,4 +17,8 @@ Import-Package: com.sap.esb.security,javax.jms,javax.jws,javax.wsdl,java
  l.flib3,com.sap.aii.mapping.api,com.sap.aii.ib.bom.flib.types,com.sap.x
  i.mapping.camel
 Provide-Capability: messagemapping.test_mm;version:Version="1.0.0"
+Origin-Bundle-Name: test_mm
+Origin-Bundle-Version: 1.0.0
+Origin-Bundle-SymbolicName: test_mm
+Origin-ModifiedDate: 1772011329205
 
